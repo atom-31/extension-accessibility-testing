@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility Violations</title>
+    <link href="./output.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .violation {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid red;
+            background-color: #fdd;
+        }
+        .arrow {
+            transition: transform 1ms ease-in-out;
+            transition-duration: 0.2s;
+            transition-timing-function: linear;
+        }
+        .node-item {
+            display: flex;
+        }
+        .node-html {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .code-block pre {
+            margin: 0;
+            padding: 0;
+            font-size: 14px;
+        }
+        .code-block code {
+            display: block;
+            white-space: pre-wrap;
+        }
+    </style>
+
+</head>
+<body class="font-mono bg-white">
+    <div class="mt-5">
+        <h1 class="flex items-center justify-center text-lg">Accessibility Violations</h1>
+    </div>
+    <div class="flex flex-col items-center justify-center mt-6">
+        <input id="urlInput" type="search" class="w-96 p-2 rounded-lg shadow-xl bg-gray-200" placeholder="Search URL">
+        <div class="flex flex-row gap-3 mb-5 mt-2">
+            <button id="resetButton" class="font-bold text-white rounded-lg shadow-xl p-2 bg-red-500 mt-2 hover:scale-105 duration-300">Reset</button>
+            <button id="refreshButton" class="font-bold text-white rounded-lg shadow-xl p-2 bg-blue-500 mt-2 hover:scale-105 duration-300">Refresh</button>
+
+        </div>
+    </div>
+    <div id="violations-container"></div>
+    
+    <script src="violations.js"></script>
+</body>
+</html>

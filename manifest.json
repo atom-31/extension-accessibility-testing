@@ -1,0 +1,14 @@
+{
+    "manifest_version": 3,
+    "name": "Axe Testing",
+    "description": "Automated Web UI testing for Accessibility",
+    "version": "1.0",
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "permissions": [
+      "storage",
+      "activeTab",
+      "scripting"
+    ]
+  }

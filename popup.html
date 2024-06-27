@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello</title>
+    <link href="./output.css" rel="stylesheet">
+    <style>
+        #violation-count-container,
+        #violation-container {
+            visibility: hidden;
+            height: 0;
+            overflow: hidden;
+            transition: visibility 0s, height 0.3s ease;
+        }
+
+        #violation-count-container.show,
+        #violation-container.show {
+            visibility: visible;
+            height: auto;
+        }
+        
+    </style>
+</head>
+<body class="bg-gray-200 rounded-lg">
+    <h1 class="mt-2 font-bold text-center text-lg flex items-center justify-center font-mono">Automated Web UI testing for Accessibility</h1>
+    <div class="flex flex-col items-center justify-center bg-white rounded-lg shadow-xl m-4">
+        <div class="flex ">
+            <button id="testbutton" class="font-bold text-white rounded-lg shadow-xl p-3 bg-blue-500 mt-2 font-mono">Run Test</button>
+        </div>
+        <div class="flex flex-col gap-2" id="small-buttons">
+            <button id="opentabbutton" class="underline text-sm text-black font-mono mt-2">Open Violations</button>
+            <button id="refreshbutton" class="underline text-sm text-black font-mono">Refresh</button>
+        </div>
+        <div id="violation-count-container" class="font-bold mb-2 mt-1">
+            <div id="violation-count" class="font-mono"></div>
+        </div>
+    </div>
+    <div id="violation-container" class="p-4 rounded-lg shadow-xl bg-white m-4">
+        <div class="flex items-center justify-center flex-col w-96 h-auto">
+
+                <div id="violation" class="font-bold font-mono"></div>
+                <button id="copybutton" class="flex items-end justify-end">
+                    <img src ='./clipboard.svg' class="w-10 h-10">
+                </button>
+            <!-- <button id="" class="font-bold text-white rounded-lg shadow-xl p-2 bg-blue-500 mt-2">Copy to Clipboard</button> -->
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
